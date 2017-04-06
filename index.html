@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="js/lib/handsontable.full.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="js/lib/knockout-3.4.2.js"></script>
+    <script src="js/lib/handsontable.full.min.js"></script>
+    <script src="js/lib/alasql.min.js"></script>
+</head>
+<body>
+
+<div id="container">
+
+    <div id="sql">
+        <textarea data-bind="value: sql"></textarea>
+        <button data-bind="click: executeSQL">execute SQL</button>
+        <button data-bind="click: clearSQL">clear SQL</button>
+    </div>
+
+    <div id="spreadsheet"></div>
+
+</div>
+
+
+<script src="js/src/index.js"></script>
+</body>
+</html>
