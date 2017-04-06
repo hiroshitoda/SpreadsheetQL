@@ -19,8 +19,10 @@ var _hotOptions = {
     autoRowSize: true,
     copyPaste: true,
     copyRowsLimit: 10000,
-    afterPaste: function(){
-        _fullData = JSON.parse(JSON.stringify(_visibleData));
+    afterChange: function(changes, source){
+        if (source === 'edit' || source === 'CopyPaste.paste') {
+            _fullData = JSON.parse(JSON.stringify(_visibleData));
+        }
     }
 };
 var _hot = new Handsontable(_container, _hotOptions);
